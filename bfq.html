@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>kg专属定制VIP高清蓝光HD无码播放器浏览器版1.0</title>
+	<script src="https://cdn.bootcss.com/flv.js/1.4.2/flv.min.js"></script>
+	<style>
+		*{
+			margin: 0;padding: 0;
+		}
+		.kpp{
+			text-align:center;  
+		}
+	</style>
+</head>
+<body>	
+	<div class="kpp">
+		<video id="videoElement" controls onfocus="ak()"width="1080" height="560" poster="http://i.17173cdn.com/2fhnvk/YWxqaGBf/cms3/VGLwsGblzpvxtyC.gif"></video>
+		<div>
+			<input type="file" id="ppk" onchange="ak(this)">
+		</div>
+	</div>
+</body>
+<script>
+	function ak(e){
+    if (flvjs.isSupported()) {
+    	//var gk=document.getElementById('ppk').files;
+    	//var urlkg=document.getElementById("ppk").files[0].getAsDataURL();
+    	//var urlkg=readFileFirefox(document.getElementById("ppk"));
+    	//var urlkg=gk.item(0).getAsDataURL();
+    	var urlkg=document.getElementById('ppk').value;
+    	var gk1=urlkg.lastIndexOf('\\'),gk2=urlkg.lastIndexOf('.');
+    	// alert(urlkg.substr(gk2+1));alert(urlkg.substr(gk1+1));
+    	// var a='flv',b='qwe.flv'
+        var videoElement = document.getElementById('videoElement');
+        var flvPlayer = flvjs.createPlayer({
+            type: urlkg.substr(gk2+1),
+            url: window.URL.createObjectURL(e.files[0])
+        });
+        flvPlayer.attachMediaElement(videoElement);
+        flvPlayer.load();
+        flvPlayer.play();
+    }}
+</script>
+</html>

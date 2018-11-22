@@ -1,13 +1,124 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>中文页面</title>
-	</head>
-	<body>
-		<h1 align="center">我的中文页面</h1>
-		<a href="https://yourkg.github.io" style="color: yellowgreen;text-decoration: none;">语言to英语</a>
-		<footer style="padding-top: 30%;text-align: right;"><a href="dnf.html"style="">一个flash-dnf小游戏</a>&nbsp&nbsp<a href="bfq.html"style="">原先页面上的h5播放器</a></footer>
-	</body>
+<head>
+	<title>KGHome</title>
+<!--meta_tags-->	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+<!--//meta_tag_keywords-->
+<!-- Custom-Style-Sheet -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/><!--style_sheet-->
+	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/font-awesome.css"> <!-- Font-Awesome_Icons-CSS -->
+	<link href="http://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"><!--online_fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<!--//Custom-Style-Sheet -->
+</head>
+<body>
+<h1 style="font-size: 4em">Welc<span class="w3l-try">o</span>me t<span class="w3l-try">o</span> visit my sta<span class="w3l-try">t</span>ic page</h1>
+<div class="w3ls-agile-profile">
+	<div class="container">
+		<h2 class="w3ls-me">Click on the link below to see my several projects</h2>
+		<P style="font-size: 2em">I. <a href='yourkg.coding.me'>The project is still under development...</a></p>
+		<br>
+		<P style="font-size: 2em">II.<a href='yourkg.coding.me' style="color: chartreuse">Solve how to play FLV video using HTML5 &lt;video&gt;"(flv.js)</a></p>
+		<span id="typed" style="white-space:pre;"></span>
+		<p class="w3ls-p"><a href="yourkg.coding.me" style="color: orangered">And this is my personal diary. welcome to see</a></p>
+		<h3 class="w3ls-text">I like <span class="w3l-try1"> C </span> A <span class="w3l-try1"> T</span>s if it is <a href="https://en.wikipedia.org/wiki/Dragon_Li" style="color: saddlebrown">DragonLi</a></h3>
+		<div id="typed-strings" class="agileits_w3layouts_strings" >
+			<p style="font-size: 1.8em" >NOW <i>Sea<span class="w3l-try">rch </span>M<span class="w3l-try">ore</span> Projects...</i></p>
+			<p style="font-size: 1.8em" >NOW <i><span class="w3l-try">Load</span><span class="w3l-try">ing</span> Project...</i></p>
+			<p style="font-size: 2em" >No <i>Mor<span class="w3l-try">e</span> Projects...╮(╯▽╰)╭</i></p>
+		</div>
+		<a href="#small-dialog1" class="buy btn-wayra w3_play_icon1">About Me</a>
+	</div>
+</div>
+<div class="w3_agileits_social_media">
+	<ul>
+		<li><a href="https://github.com/" class="wthree_facebook"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+		<li><a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=公众号appid&redirect_uri=http%3A%2F%2Fdev.spbcn.org%2Fwechat-vote-phone?type=weixin&scope=snsapi_userinfo&response_type=code&state=STATE#wechat_redirect" class="wthree_twitter"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
+		<li><a href="http://connect.qq.com/widget/shareqq/index.html?url=https://youkg.coding.me/" class="wthree_dribbble"><i class="fa fa-qq" aria-hidden="true"></i></a></li>
+		<li><a href="http://v.t.sina.com.cn/share/share.php" class="wthree_behance"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
+	</ul>
+</div>
+
+<!--pop-up-->
+<div id="small-dialog1" class="mfp-hide">
+	<div class="about" id="about">
+			<div class="person-info-agileits-w3layouts">
+			<h3 class="w3_head w3_head1">About Me <span>a good cat</span></h3>
+			<p><span>Hello!</span> I am a cat...a lihua cat. </p>
+				<ul>
+					<li><span>Name</span>: K G</li>
+					<li><span>Age</span>: 23 Years</li>
+					<li><span>Experience</span>: -0 Years</li>
+					<li><span>Email</span>: <a href="mailto:297232505@qq.com">297232505@QQ.com</a></li>
+					<li><span>Phone</span>: 17686395639</li>
+					<li><span>Website</span>: <a href="yourkg.coding.me">我的静态web</a></li>
+					<li><span>Address</span>: East-Yang village, 59, BinZhou</li>
+					<li><a href="#" class="botton-w3ls">My Resume</a>
+						<a href="yourkg.coding.me" class="botton-w3ls">Language</a>
+					</li>
+				</ul>
+			</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<footer>Copyright © 8102. Chinese Li Hua reserves all rights.<a target="_blank" href="http://sc.chinaz.com/moban/"></a></footer>
+<!--//pop-up-->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- pop-up-box-js-file -->  
+	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+<!--//pop-up-box-js-file -->
+
+<script>
+	$(document).ready(function() {
+	$('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({
+		type: 'inline',
+		fixedContentPos: false,
+		fixedBgPos: true,
+		overflowY: 'auto',
+		closeBtnInside: true,
+		preloader: false,
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
+	});
+																	
+	});
+</script>
+<!-- banner-type-text -->
+	<script src="js/typed.js" type="text/javascript"></script>
+	
+    <script>
+		$(function(){
+
+			$("#typed").typed({
+				// strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+				stringsElement: $('#typed-strings'),
+				typeSpeed: 30,
+				backDelay: 500,
+				loop: false,
+				contentType: 'html', // or text
+				// defaults to false for infinite loop
+				loopCount: false,
+				callback: function(){ foo(); },
+				resetCallback: function() { newTyped(); }
+			});
+
+			$(".reset").click(function(){
+				$("#typed").typed('reset');
+			});
+
+		});
+
+		function newTyped(){ /* A new typed object */ }
+
+		function foo(){ console.log("Callback"); }
+    </script>
+<!-- //banner-type-text -->
+
+</body>
 </html>

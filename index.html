@@ -1,124 +1,459 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>KGHome</title>
-<!--meta_tags-->	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta name="keywords" content="">
-<!--//meta_tag_keywords-->
-<!-- Custom-Style-Sheet -->
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/><!--style_sheet-->
-	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-	<link rel="stylesheet" href="css/font-awesome.css"> <!-- Font-Awesome_Icons-CSS -->
-	<link href="http://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"><!--online_fonts-->
-	<link href="http://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-<!--//Custom-Style-Sheet -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KG_NOTE</title>
+<meta name="description" content="KG">
+<meta name="keywords" content="关键词" />
+
+<!-- Favicons
+    ================================================== -->
+
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+<!-- Slider
+    ================================================== -->
+<link href="css/owl.carousel.css" rel="stylesheet" media="screen">
+<link href="css/owl.theme.css" rel="stylesheet" media="screen">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+
+<link rel="stylesheet" type="text/css" href="fonts/sns_fonts/iconfont.css">
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-<h1 style="font-size: 4em">Welc<span class="w3l-try">o</span>me t<span class="w3l-try">o</span> visit my sta<span class="w3l-try">t</span>ic page</h1>
-<div class="w3ls-agile-profile">
-	<div class="container">
-		<h2 class="w3ls-me">Click on the link below to see my several projects</h2>
-		<P style="font-size: 2em">I. <a href='yourkg.coding.me'>The project is still under development...</a></p>
-		<br>
-		<P style="font-size: 2em">II.<a href='yourkg.coding.me' style="color: chartreuse">Solve how to play FLV video using HTML5 &lt;video&gt;"(flv.js)</a></p>
-		<span id="typed" style="white-space:pre;"></span>
-		<p class="w3ls-p"><a href="yourkg.coding.me" style="color: orangered">And this is my personal diary. welcome to see</a></p>
-		<h3 class="w3ls-text">I like <span class="w3l-try1"> C </span> A <span class="w3l-try1"> T</span>s if it is <a href="https://en.wikipedia.org/wiki/Dragon_Li" style="color: saddlebrown">DragonLi</a></h3>
-		<div id="typed-strings" class="agileits_w3layouts_strings" >
-			<p style="font-size: 1.8em" >NOW <i>Sea<span class="w3l-try">rch </span>M<span class="w3l-try">ore</span> Projects...</i></p>
-			<p style="font-size: 1.8em" >NOW <i><span class="w3l-try">Load</span><span class="w3l-try">ing</span> Project...</i></p>
-			<p style="font-size: 2em" >No <i>Mor<span class="w3l-try">e</span> Projects...╮(╯▽╰)╭</i></p>
-		</div>
-		<a href="#small-dialog1" class="buy btn-wayra w3_play_icon1">About Me</a>
-	</div>
+  <div id="particles-js"></div>
+  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-terminal"></i>回顶部</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#">首页</a>
+                    </li>       
+                    <li>
+                        <a class="page-scroll" href="sjz.html">全部文章</a>
+                    </li>                    
+                    <li>
+                        <a class="page-scroll" href="AI.html">机器学习</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="dnf.html">GAMES</a>
+                    </li>                    
+                    <li>
+                        <a class="page-scroll" href="#contact">联系方式</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<!-- Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <!--<h1><span class="brand-heading"><img style='width:50%;height:50%; border-radius:50%'src='123.png'></img></span></h1>-->
+                        <p class="intro-text">好好学习，天天向上</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<!--<div class="copyrights">我 <a href="http://yourkg.github.io" >Home[EN]</a></div>-->
+<!-- Services Section -->
+<!--<div id="services" class="text-center">-->
+  <!--<div class="container">-->
+    <!--<div class="section-title center">-->
+      <!--<h2>111 <strong>11</strong></h2>-->
+      <!--<hr>-->
+      <!--</div>-->
+    <!--<div class="space"></div>-->
+    <!--<div class="row">-->
+      <!--<div class="col-md-3 col-sm-6 service"> <i class="fa fa-laptop"></i>-->
+        <!--<h4><strong>111</strong></h4>-->
+        <!--<p>-->
+	    <!--11&nbsp;111</br>-->
+		<!--111-->
+		<!--</p>-->
+      <!--</div>-->
+      <!--<div class="col-md-3 col-sm-6 service"> <i class="fa fa-code"></i>-->
+        <!--<h4><strong>111</strong></h4>-->
+        <!--<p>-->
+		<!--111</br>-->
+		<!--111</br>-->
+		<!---->
+		<!--</p>-->
+      <!--</div>-->
+      <!--<div class="col-md-3 col-sm-6 service"> <i class="fa fa-rocket"></i>-->
+        <!--<h4><strong>111</strong></h4>-->
+        <!--<p>-->
+		  <!--111</br>-->
+		  <!--111-->
+		<!--</p>-->
+      <!--</div>-->
+      <!--<div class="col-md-3 col-sm-6 service"> <i class="fa fa-bullseye"></i>-->
+        <!--<h4><strong>111</strong></h4>-->
+        <!--<p>111</br>-->
+		  <!--111</p>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+<!-- About Section -->
+    <div id="about2" class="about">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2><strong>2019</strong>新年新气象</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-6"> <img src="img/about2.jpg" class="img-responsive"> </div>
+      <div class="col-md-6">
+        <div class="about-text"> <i class="fa fa-pencil"></i>
+          <div class="padding-left"><h4>又一年</h4>
+          <p>又一年</p></div>
+          <i class="fa fa-book"></i>
+          <div class="padding-left"><h4>很多年之前</h4>
+          <p>我就知道过的很快</p></div>
+          <i class="fa fa-clock-o"></i>
+          <div class="padding-left"><h4>天气:晴</h4>
+          <p>00点00分，2019年1月1日</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="w3_agileits_social_media">
-	<ul>
-		<li><a href="https://github.com/" class="wthree_facebook"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-		<li><a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=公众号appid&redirect_uri=http%3A%2F%2Fdev.spbcn.org%2Fwechat-vote-phone?type=weixin&scope=snsapi_userinfo&response_type=code&state=STATE#wechat_redirect" class="wthree_twitter"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
-		<li><a href="http://connect.qq.com/widget/shareqq/index.html?url=https://youkg.coding.me/" class="wthree_dribbble"><i class="fa fa-qq" aria-hidden="true"></i></a></li>
-		<li><a href="http://v.t.sina.com.cn/share/share.php" class="wthree_behance"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-	</ul>
+<div id="about" class="about">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2><strong>又不下雪了，😓</strong>我跟小伙伴们还是出来散散步</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-6"> <img src="img/about.jpg" class="img-responsive"> </div>
+      <div class="col-md-6">
+        <div class="about-text"> <i class="fa fa-pencil"></i>
+          <div class="padding-left"><h4>天气不错</h4>
+          <p>小伙伴们很开心</p></div>
+          <i class="fa fa-book"></i>
+          <div class="padding-left"><h4>我也</h4>
+          <p>还行吧</p></div>
+          <i class="fa fa-clock-o"></i>
+          <div class="padding-left"><h4>天气:晴</h4>
+          <p>2018年12月？日</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div id="about1" class="about">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2><strong>又下雪了</strong>我跟小伙伴们出来散散步</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-6"> <img src="img/about1.jpg" class="img-responsive"> </div>
+      <div class="col-md-6">
+        <div class="about-text"> <i class="fa fa-pencil"></i>
+          <div class="padding-left"><h4>下雪了，我跟小伙伴们出来散散步</h4>
+          <p>今天的雪很大</p></div>
+          <i class="fa fa-book"></i>
+          <div class="padding-left"><h4>很急</h4>
+          <p>我和小伙伴们都很紧张</p></div>
+          <i class="fa fa-clock-o"></i>
+          <div class="padding-left"><h4>天气:雪</h4>
+          <p>2018年12月？日</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+	<!--<div id="achivements" class="section dark-bg">-->
+			<!--<div class="container">	-->
+				<!--<div class="row">-->
+					<!--<div class="col-md-3 col-sm-3">-->
+						<!--<div class="achivement-box">-->
+							<!--<i class="fa fa-smile-o"></i>-->
+							<!--<span class="count">3</span>-->
+							<!--<h4>接触编程(年)</h4>                            -->
+						<!--</div>-->
+					<!--</div> -->
+					<!--<div class="col-md-3 col-sm-3">-->
+						<!--<div class="achivement-box">-->
+							<!--<i class="fa fa-code"></i>-->
+							<!--<span class="count">5000</span>-->
+							<!--<h4>大约写过(行)</h4>                            -->
+						<!--</div>-->
+					<!--</div> -->
+					<!--<div class="col-md-3 col-sm-3">-->
+						<!--<div class="achivement-box">-->
+							<!--<i class="fa fa-check-square-o"></i>-->
+							<!--<span class="count">1000</span>-->
+                            <!--<h4>大约时长(小时)</h4>-->
+						<!--</div>-->
+					<!--</div> -->
+					<!--<div class="col-md-3 col-sm-3">-->
+						<!--<div class="achivement-box">-->
+							<!--<i class="fa fa-trophy"></i>-->
+							<!--<span class="count">0</span>-->
+							<!--<h4>其他</h4>                            -->
+						<!--</div>-->
+					<!--</div> -->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+<!-- Team Section -->
+<!--<div id="team" class="text-center">-->
+  <!--<div class="container">-->
+    <!--<div class="section-title center">-->
+      <!--<h2>项目 <strong>经历</strong></h2>-->
+      <!--<hr>-->
+      <!--<p><s>严格上讲</s>，并没有参与过<s>正式的</s>项目。以下列出的仅是几个自己做过的实践</p>-->
+    <!--</div>-->
+    <!--<div id="row">-->
+	<!---->
+	<!--<div class="col-md-3 col-sm-6">-->
+        <!--<div class="thumbnail"> <img src="img/team/04.jpg"  class="img-circle team-img">-->
+          <!--<div class="caption">-->
+            <!--<h3>15年冬</h3>-->
+            <!--<p>C语言写的-车票管理系统-一个简单控制台应用</p>-->
+            <!--<p>S.课后练习<br>-->
+              <!--T.稍微想了想，就立马写代码了，反正功能也不多<br>-->
+              <!--A.就建了几个函数，在主函数里调用，调用的时候就<br>-->
+              <!--是按照输入的选单上的数，用swich选择的<br>-->
+              <!--R.结果还不错，自己想的都实现了，其实当时还是挺有成就感的<br>-->
+              <!--当时也不知道数据库，啥也不知道，就会函数，循环，选择<br>-->
+              <!--初学编程，接触的C，纳闷自己的程序为啥在黑框框里，也不知道这是控制台程序😂<br>-->
+            <!--</p>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+	<!---->
+      <!--<div class="col-md-3 col-sm-6">-->
+        <!--<div class="thumbnail"> <img src="img/team/04.jpg" class="img-circle team-img">-->
+          <!--<div class="caption">-->
+            <!--<h3>16年春</h3>-->
+            <!--<p>C++的MFC做的教室学生端强关程序</p>-->
+            <!--<p>S.老师讲课的时候会用到一种投屏的软件，不能自由关闭<br>-->
+              <!--T.它一是在投屏的时候屏蔽了大部分按键，二是本身程序有防杀的选项<br>-->
+              <!--A.我首先想到的是用windows系统自带的接口tskill+程序UID来关闭它<br>-->
+              <!--在试过发现权限不足后借鉴了网上‘提权函数’，在MFC的模板里设置<br>-->
+              <!--程序隐藏界面，然后设置钩子截取键盘上的按键触发程序的执行<br>-->
+              <!--R.折腾了两天成功了，教室的电脑都能正常运行，至少在winxp上是可以<br>-->
+              <!--别的也没试过，估计会出问题。在做这个小程序的时候，主要是抓住了<br>-->
+              <!--投屏学生端程序的一个小漏洞，就是X跟B键(当时挨个试,因为当时推测<br>-->
+              <!--SCROLLOOK没被屏蔽，因为按这个可以举手,结果也不行反倒是试出来这两个键)<br>-->
+              <!--没有屏蔽，可以被程序的钩子获取到，这样就可以在被投屏的情况下关闭了<br>-->
+              <!--造福全班-->
+            <!--</p>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-md-3 col-sm-6">-->
+        <!--<div class="thumbnail"> <img src="img/team/04.jpg"  class="img-circle team-img">-->
+          <!--<div class="caption">-->
+            <!--<h3>16年秋</h3>-->
+            <!--<p>Web2app-带定位的即时雷达图</p>-->
+            <!--<p>S.学习网页的时候老师统一让我们用一款叫HBuild的编辑器<br>-->
+            <!--课余我发现了它有在线打包自己的网页成app的功能<br>-->
+            <!--我当时正给我同学推荐nmc.gov.cn这个网站的雷达图很好<br>-->
+             <!--T.我转而决定做给他看app效果更好，首先我做了一个前端的<br>-->
+             <!--web静态页面，又去网上找了h5的Geolocation API参照了一下<br>-->
+              <!--然后就是获取图片跟用canvas处理将定位表在图片上<br>-->
+             <!--A.当时还不知道网络爬虫,只知道往src里写个图片链接可以链过来<br>-->
+              <!--赶巧那个网站的图片的链接是可用的,而且格式固定，还有规律，<br>-->
+              <!--可用通过链接里时间的改换获取不同时间段的图片，依稀记得网站<br>-->
+              <!--的图片是隔6分钟刷一张<br>-->
+             <!--R.最终app的确生成了，后来又看了一些网页做app的例子，改进了一下<br>-->
+              <!--但是最终并不可靠，一直没有实现精准的定位，当时想的笨方法<br>-->
+              <!--因为那个网站获取的雷达图分辨率固定，我就尝试把每个像素换算成<br>-->
+              <!--多少经纬度,在一个查经纬度的网站上仔细对照获取的图片找一个<br>-->
+              <!--参照点，最终一直有误差就不了了之了，这之后将近一年时间，很低迷<br>-->
+              <!--没有做任何东西，正赶上学校里团队项目找人，也没有参加，错过两次-->
+            <!--</p>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-md-3 col-sm-6">-->
+        <!--<div class="thumbnail"> <img src="img/team/04.jpg"  class="img-circle team-img">-->
+          <!--<div class="caption">-->
+            <!--<h3>18年秋</h3>-->
+            <!--<p>Django-网站开发</p>-->
+            <!--<p>至今，在做一个用Django做的网站-->
+            <!--将作为毕业论文项目</p>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+<!-- Testimonials Section -->
+<div id="testimonials" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>我的<strong>推荐</strong></h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div id="testimonial" class="owl-carousel owl-theme">
+          <div class="item">
+            <p>优秀博客</br>for宁哥<br>
+            <a href="www.baidu.com">GO TO</a>
+			</p>
+          </div>
+          <div class="item">
+            <p>
+			？？？
+			</p>
+          </div>
+          <div class="item">
+            <p>
+			？？？
+			</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!--pop-up-->
-<div id="small-dialog1" class="mfp-hide">
-	<div class="about" id="about">
-			<div class="person-info-agileits-w3layouts">
-			<h3 class="w3_head w3_head1">About Me <span>a good cat</span></h3>
-			<p><span>Hello!</span> I am a cat...a lihua cat. </p>
-				<ul>
-					<li><span>Name</span>: K G</li>
-					<li><span>Age</span>: 23 Years</li>
-					<li><span>Experience</span>: -0 Years</li>
-					<li><span>Email</span>: <a href="mailto:297232505@qq.com">297232505@QQ.com</a></li>
-					<li><span>Phone</span>: 17686395639</li>
-					<li><span>Website</span>: <a href="yourkg.coding.me">我的静态web</a></li>
-					<li><span>Address</span>: East-Yang village, 59, BinZhou</li>
-					<li><a href="#" class="botton-w3ls">My Resume</a>
-						<a href="yourkg.coding.me" class="botton-w3ls">Language</a>
-					</li>
-				</ul>
-			</div>
-		<div class="clear"></div>
-	</div>
+<!-- Contact Section -->
+<div id="contact" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2><strong>联系</strong> 方式</h2>
+      <hr>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-4"> <i class="fa fa-map-marker fa-2x"></i>
+        <p>......</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-envelope-o fa-2x"></i>
+        <p>297232505@qq.com</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-phone fa-2x"></i>
+        <p>QQ:297232505</p>
+        <p>电话:17686395639</p>
+      </div>
+      <hr>
+      <div class="clearfix"></div>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <hr>
+      <h3>给我发邮件</h3>
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder="姓名" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder="邮箱" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="内容" required></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+        <div id="success"></div>
+        <button type="submit" class="btn btn-default">发送</button>
+      </form>
+    </div>
+  </div>
 </div>
-<footer>Copyright © 8102. Chinese Li Hua reserves all rights.<a target="_blank" href="http://sc.chinaz.com/moban/"></a></footer>
-<!--//pop-up-->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+</div>
+<nav id="footer">
+  <div class="container">
+    <div class="pull-left fnav">
+      <p>Copyright &copy; 2019 KG
+    </div>
+    <div class="pull-right fnav">
+      <ul class="footer-social">
+	    <li><a href="http://v.t.sina.com.cn/share/share.php?url=http://blog.youzewang.com/jianli&title=Baron简历"><i class="icon iconfont">&#xe66e;</i></a></li>
+        <li><a href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.youzewang.com/jianli=&title=Baron简历"> <i class="icon iconfont">&#xe629;</i></a></li>
+        <li><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.youzewang.com/jianli&title=Baron简历"> <i class="icon iconfont">&#xe616;</i></a></li>
 
-<!-- pop-up-box-js-file -->  
-	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
-<!--//pop-up-box-js-file -->
+        <li><a href="http://share.renren.com/share/buttonshare.do?link=http://blog.youzewang.com/jianli&title=Baron简历"><i class="icon iconfont">&#xe66b;</i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
+<script type="text/javascript" src="js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="js/jquery.counterup.js"></script> 
+<script type="text/javascript" src="js/waypoints.js"></script>
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="js/contact_me.js"></script>
+<script src="js/owl.carousel.js"></script>
+
+<!-- Javascripts
+    ================================================== --> 
+<script type="text/javascript" src="js/main.js"></script>
 
 <script>
-	$(document).ready(function() {
-	$('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({
-		type: 'inline',
-		fixedContentPos: false,
-		fixedBgPos: true,
-		overflowY: 'auto',
-		closeBtnInside: true,
-		preloader: false,
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in'
-	});
-																	
-	});
+ $(function()
+ {
+ var u = navigator.userAgent;
+if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1||u.indexOf('iPhone') > -1||u.indexOf('Windows Phone') > -1||navigator.userAgent.indexOf("iPad")>-1) {
+   $(".hover-bg .hover-text").css({'opacity':'1'});
+   
+   $(".hover-bg .hover-text>h4").css({'opacity':'1','-webkit-transform':'translateY(0)','transform':'translateY(0)'});
+   
+   $(".hover-bg .hover-text>i").css({'opacity':'1'});
+} 
+    
+ });
+  
 </script>
-<!-- banner-type-text -->
-	<script src="js/typed.js" type="text/javascript"></script>
-	
-    <script>
-		$(function(){
-
-			$("#typed").typed({
-				// strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
-				stringsElement: $('#typed-strings'),
-				typeSpeed: 30,
-				backDelay: 500,
-				loop: false,
-				contentType: 'html', // or text
-				// defaults to false for infinite loop
-				loopCount: false,
-				callback: function(){ foo(); },
-				resetCallback: function() { newTyped(); }
-			});
-
-			$(".reset").click(function(){
-				$("#typed").typed('reset');
-			});
-
-		});
-
-		function newTyped(){ /* A new typed object */ }
-
-		function foo(){ console.log("Callback"); }
-    </script>
-<!-- //banner-type-text -->
-
 </body>
 </html>

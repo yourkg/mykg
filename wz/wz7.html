@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KG_NOTE</title>
+<meta name="description" content="KG">
+<meta name="keywords" content="爬虫" />
+
+<!-- Favicons
+    ================================================== -->
+
+<link rel="shortcut icon" href="../favicon.ico" type="../image/x-icon">
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.css">
+
+<!-- Slider
+    ================================================== -->
+<link href="../css/owl.carousel.css" rel="stylesheet" media="screen">
+<link href="../css/owl.theme.css" rel="stylesheet" media="screen">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/prettyPhoto.css">
+
+<link rel="stylesheet" type="text/css" href="../fonts/sns_fonts/iconfont.css">
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+  <div id="particles-js"></div>
+  <script src="../js/particles.js"></script>
+  <script src="../js/app.js"></script>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-terminal"></i>回顶部</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../index.html">首页</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../sjz.html">全部文章</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../AI.html">机器学习</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../other.html">OTHERS</a>
+                    </li>                    
+                    <li>
+                        <a class="page-scroll" href="../index.html#contact">联系方式</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<!-- Header -->
+    <header class="intro" >
+        <div class="intro-body">
+            <div class="container">
+                <div class="row" style="text-align: left">
+                  <div class="col-md-8 col-md-offset-2">
+                        <!--<h1><span class="brand-heading"><img style='width:50%;height:50%; border-radius:50%'src='123.png'></img></span></h1>-->
+                        <p class="intro-text">
+													<br />
+													<br />
+													<br />
+													<p> 以后会更正排版</p>
+                    <pre><code>
+										   用Python实现爬虫小试手
+参考：<a href="https://www.cnblogs.com/Axi8/p/5757270.html" >https://www.cnblogs.com/Axi8/p/5757270.html</a> 
+读取页面源码：
+<img src="wz7.html.img/1.png" />
+直接出现报错
+网上搜的错误原因，参考：<a href="https://www.jb51.net/article/109508.htm">https://www.jb51.net/article/109508.htm</a>
+情况就是在python3版本已经把urllib2,urlparse等五个模块都整合进了urllib中。
+又出现问题
+<img src="wz7.html.img/2.png" />
+发现原来python在引包的时候，它的子包不会全部引入。那这样试试：
+<img src="wz7.html.img/3.png" />
+import*居然也导入不进来，然后又看了import机制。参考：<a href="https://www.cnblogs.com/gaowengang/p/8543840.html">https://www.cnblogs.com/gaowengang/p/8543840.html</a>
+<a href="cnblogs.com/yan-lei/p/7828871.html">cnblogs.com/yan-lei/p/7828871.html</a>
+没发现任何问题。可能是这个urllib的包本身的问题。
+参考：<a href="https://blog.csdn.net/py_young/article/details/80638626">https://blog.csdn.net/py_young/article/details/80638626</a>
+看来这个整合包的时候肯定有特殊处理，以后再剖析，时间原因，赶紧接着干。
+ <img src="wz7.html.img/4.png" />
+老老实实的导入。
+ <img src="wz7.html.img/5.png" />
+回车
+<img src="wz7.html.img/6.png" />
+太着急，输错了好几次。。。最后打印的a.read()结果就是想要的。这个网页的页面代码。。
+然后下面学习如何进一步处理并获取图片地址
+首先是正则表达式。参考：<a href="http://www.runoob.com/regexp/regexp-syntax.html">http://www.runoob.com/regexp/regexp-syntax.html</a>
+先确定一下要获取图片地址的连接：
+https://image.baidu.com/search/index?tn=baiduimage&ct=201326592&lm=-1&cl=2&ie=gb18030&word=%D7%D4%C5%C4%C3%A8&fr=ala&ala=1&alatpl=adress&pos=0&hs=2&xthttps=111111就这个了，找到图片url的格式。
+ <img src="wz7.html.img/7.png" />
+精心写出正则表达式 zz = r'data-imgurl="(.+?\.jpg)"'
+输入执行
+ <img src="wz7.html.img/8.png" >
+用compile处理一下参考：<a href="https://www.cnblogs.com/nomorewzx/p/4203829.html">https://www.cnblogs.com/nomorewzx/p/4203829.html</a>
+ <img src="wz7.html.img/9.png" >
+发现报错
+原来是编码问题参考：<a href="https://blog.csdn.net/tzs_1041218129/article/details/52228905">https://blog.csdn.net/tzs_1041218129/article/details/52228905</a>
+需要用.decode('utf-8')
+下面重新写在脚本里：
+运行后抓取有问题。。。推测是百度做了防爬处理。只能换个地址--：
+另外用到了下载urlretrieve，参考：<a href="https://blog.csdn.net/drdairen/article/details/61934598">https://blog.csdn.net/drdairen/article/details/61934598</a>
+重新改了一下，这个地址的图片连接还挺有意思，没有http：，古在下载的时候给它加上了。
+ <img src="wz7.html.img/10.png" >
+运行：
+ <img src="wz7.html.img/11.png" >
+没指定保存地址，所以图片下载到了文件所在目录：
+ <img src="wz7.html.img/12.png" >
+好了以上最基本的爬虫已经实现了，但是爬的太近，下面是进一步进阶：
+参考：<a href="https://www.cnblogs.com/Axi8/p/5773269.html">https://www.cnblogs.com/Axi8/p/5773269.html</a>
+学习了下Xpath，参考：<a href="www.jikexueyuan.com/course/902_2.html?ss=1">www.jikexueyuan.com/course/902_2.html?ss=1</a>
+但我决定还是用正则来搞：
+根据参考可见主要是让爬虫找到包含带图片页面的页面地址（连接）：
+那么我分析了一下，如图先对百度图片搜索这一页的所有链接进行获取：
+ <img src="wz7.html.img/13.png" >
+修改一下之前的代码：
+<img src="wz7.html.img/14.png" />
+这里需要注意一下，这个正则表达式是仔细的观察print（b）的打印结果后得出的
+打印出的与浏览器的不一样！！，要以打印出的内容为准。
+执行后得到很多地址：
+ <img src="wz7.html.img/15.png" >
+我们要对这些地址的图片进行爬取：
+对代码进行修改并精炼：
+为了对连接的“\”进行处理掉，参考了translate()方法：<a href="http://www.runoob.com/python3/python3-string-translate.html">http://www.runoob.com/python3/python3-string-translate.html</a>
+参考又出现版本问题，菜鸟上的不行（以后我去菜鸟上去写上）。参考：<a href="https://www.cnblogs.com/wushuaishuai/p/7687384.html">https://www.cnblogs.com/wushuaishuai/p/7687384.html</a>
+终于成功。
+期间还研究了str在python中，参考有<a href="https://blog.csdn.net/jslijb/article/details/79310167">https://blog.csdn.net/jslijb/article/details/79310167</a>
+<a href="http://www.cnblogs.com/yangmingxianshen/p/7990102.html">http://www.cnblogs.com/yangmingxianshen/p/7990102.html</a>
+<a href="https://blog.csdn.net/doudoudouzoule/article/details/85335268">https://blog.csdn.net/doudoudouzoule/article/details/85335268</a>
+<a href="https://www.cnblogs.com/chengd/p/7491041.html">https://www.cnblogs.com/chengd/p/7491041.html</a>
+。。。因为我发现str在python3中就像一个关键字一样，他有字符串的方法，他很可能是string类型的一个特殊对象。。然后他跟bytes啥的也有关，编码问题decode啥的以后再研究。。
+以下是整理好的代码：
+注：参考<a href="https://blog.csdn.net/eric_sunah/article/details/11301873">https://blog.csdn.net/eric_sunah/article/details/11301873</a>
+<a href="https://blog.csdn.net/qq_40309183/article/details/80716641">https://blog.csdn.net/qq_40309183/article/details/80716641</a>
+在爬的时候加了UserAgent
+还有一些异常处理。。
+ <img src="wz7.html.img/16.png" >
+
+最终运行结果：
+ <img src="wz7.html.img/17.png" >
+还抓到了一些奇怪的东西，。差点撑爆桌面 幸亏我手速够快及时拖到回收站一些，看来还是得放入文件夹才行。
+整体结果还算基本满意
+，爬虫的初步研究告一段落了，以后再次深入研究时。这篇文章就当笔记，方便回顾用。
+over
+后记，上面去除‘\’时方法太笨，肯定有方法快速解决，因为浏览器就能识别这个带\的url
+另外图片完全可以放文件夹里以免撑爆桌面，用os.mkdir('文件夹名')可以让程序去创建一个文件夹。
+
+</code></pre></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+<nav id="footer">
+  <div class="container">
+    <div class="pull-left fnav">
+      <p>Copyright &copy; 2019 KG
+    </div>
+    <div class="pull-right fnav">
+      <ul class="footer-social">
+	    <li><a href="http://v.t.sina.com.cn/share/share.php?url=http://blog.youzewang.com/jianli&title=Baron简历"><i class="icon iconfont">&#xe66e;</i></a></li>
+        <li><a href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.youzewang.com/jianli=&title=Baron简历"> <i class="icon iconfont">&#xe629;</i></a></li>
+        <li><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.youzewang.com/jianli&title=Baron简历"> <i class="icon iconfont">&#xe616;</i></a></li>
+
+        <li><a href="http://share.renren.com/share/buttonshare.do?link=http://blog.youzewang.com/jianli&title=Baron简历"><i class="icon iconfont">&#xe66b;</i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script type="text/javascript" src="../js/jquery.1.11.1.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/SmoothScroll.js"></script>
+<script type="text/javascript" src="../js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../js/jquery.counterup.js"></script>
+<script type="text/javascript" src="../js/waypoints.js"></script>
+<script type="text/javascript" src="../js/jqBootstrapValidation.js"></script>
+<script type="text/javascript" src="../js/contact_me.js"></script>
+<script src="../js/owl.carousel.js"></script>
+
+<!-- Javascripts
+    ================================================== --> 
+<script type="text/javascript" src="../js/main.js"></script>
+
+<script>
+ $(function()
+ {
+ var u = navigator.userAgent;
+if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1||u.indexOf('iPhone') > -1||u.indexOf('Windows Phone') > -1||navigator.userAgent.indexOf("iPad")>-1) {
+   $(".hover-bg .hover-text").css({'opacity':'1'});
+   
+   $(".hover-bg .hover-text>h4").css({'opacity':'1','-webkit-transform':'translateY(0)','transform':'translateY(0)'});
+   
+   $(".hover-bg .hover-text>i").css({'opacity':'1'});
+} 
+    
+ });
+  
+</script>
+</body>
+</html>

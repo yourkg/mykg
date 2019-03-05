@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KG_NOTE</title>
+<meta name="description" content="KG">
+<meta name="keywords" content="django" />
+
+<!-- Favicons
+    ================================================== -->
+
+<link rel="shortcut icon" href="../favicon.ico" type="../image/x-icon">
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.css">
+
+<!-- Slider
+    ================================================== -->
+<link href="../css/owl.carousel.css" rel="stylesheet" media="screen">
+<link href="../css/owl.theme.css" rel="stylesheet" media="screen">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/prettyPhoto.css">
+
+<link rel="stylesheet" type="text/css" href="../fonts/sns_fonts/iconfont.css">
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+  <div id="particles-js"></div>
+  <script src="../js/particles.js"></script>
+  <script src="../js/app.js"></script>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-terminal"></i>回顶部</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../index.html">首页</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../sjz.html">全部文章</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../AI.html">机器学习</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../other.html">OTHERS</a>
+                    </li>                    
+                    <li>
+                        <a class="page-scroll" href="../index.html#contact">联系方式</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<!-- Header -->
+    <header class="intro" >
+        <div class="intro-body">
+            <div class="container">
+                <div class="row" style="text-align: left">
+                  <div class="col-md-8 col-md-offset-2">
+                        <!--<h1><span class="brand-heading"><img style='width:50%;height:50%; border-radius:50%'src='123.png'></img></span></h1>-->
+                        <p class="intro-text">
+													<br />
+													<br />
+													<br />
+													<p> 以后会更正排版</p>
+                    <pre><code>对之前的项目进行优化和更新
+为了在重新构建项目中清晰明了的记录整个过程，特作该笔记：
+预计整个过程在1天左右：
+首先用PyCharm创建项目，记得之前的项目不是PyCharm创建的，哪个创建的都无所谓了。
+<img src="wz8.html.img/1.png" />
+选好项目类型-Django项目，文件夹(项目路径)。这里我选择的是现成的python配置环境，也就是系统的python配置环境。还可以创建一个虚拟的环境，给该项目专门提供服务，我嫌麻烦一般都是直接选现有现成的系统环境。
+
+然后在项目栏可以看到经典的Django目录结构，以及里面的一些创建即生成的文件：
+<img src="wz8.html.img/2.png" />
+这些文件的名字一般是无需改动的。需要改动的是里面的内容。
+<img src="wz8.html.img/3.png" />在右上角设置一下运行选项：
+ <img src="wz8.html.img/4.png" />
+默认是8000，我喜欢直接设成80，然后ok即可。
+<img src="wz8.html.img/5.png" />
+在浏览器输入测试地址，访问一下哈看是否能运行。
+这里我发现Django版本貌似有点老了，我喜欢更新，我去更新一下：
+<img src="wz8.html.img/6.png" />
+<img src="wz8.html.img/7.png" />
+ 
+双击要更新的条目
+<img src="wz8.html.img/8.png" />
+
+这个install to user's site packages directory勾不勾选到现在还没发现问题，具体不甚了解。
+点这里即可
+按完后在及运行网站可以查看到已经是很新的版本了，貌似还是测试版：
+<img src="wz8.html.img/9.png" />
+<img src="wz8.html.img/10.png" />
+ 
+发现都没版本号了，估计测试版都这样，
+可以去pip list去看看：
+<img src="wz8.html.img/11.png" />
+可见在系统的环境中 django升级成功了，那么就不用管他了。。。
+接下来继续网站建设：
+django需要创建一个应用来实现网站功能，跟链接数据库，我用的mysql数据库，连接的时候需要一个特殊的python库。这里不多讲，首先创建一个数据库：
+<img src="wz8.html.img/12.png" />
+
+然后设置数据库链接设置，按照数据库配置的来：
+<img src="wz8.html.img/13.png" />
+ 
+先在settings.py找到数据库设置
+<img src="wz8.html.img/14.png" />
+
+把原来默认的改成mysql。
+然后用命令创建app，名字随便:
+<img src="wz8.html.img/15.png" />
+然后项目中就多出了这样一个文件夹与一些默认生成的文件：
+<img src="wz8.html.img/16.png" />
+接下来在models.py文件进行数据表的设计：
+这里的数据表将严格按照论文中设计的进行设计：
+<img src="wz8.html.img/17.png" />
+然后用命令创建数据库跟表：
+<img src="wz8.html.img/18.png" />
+ 
+我已经执行了，下面出现好多东西，不用管，毕竟都是ok。
+<img src="wz8.html.img/19.png" /> 
+然后执行这一句，出错了，这是因为没有在这里添加上我创建的APP
+<img src="wz8.html.img/20.png" />
+添加好即可，执行ok了：
+<img src="wz8.html.img/21.png" />
+ 
+然后执行：
+<img src="wz8.html.img/22.png" />
+ 
+ok了，不放心的话去mysql里看一下：
+<img src="wz8.html.img/23.png" />
+ 
+可以发现除了我们创建的表以外，其他的一些是django自己生成的。
+实际上可以发现diango自带了一些对用户啊，组啊的一些处理方案。但在该网站设计中并没有用到它自带的，多为自己实现的。
+
+-----------------------------------------------------------------------------------skip1 
+
+</code></pre></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+<nav id="footer">
+  <div class="container">
+    <div class="pull-left fnav">
+      <p>Copyright &copy; 2019 KG
+    </div>
+    <div class="pull-right fnav">
+      <ul class="footer-social">
+	    <li><a href="http://v.t.sina.com.cn/share/share.php?url=http://blog.youzewang.com/jianli&title=Baron简历"><i class="icon iconfont">&#xe66e;</i></a></li>
+        <li><a href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.youzewang.com/jianli=&title=Baron简历"> <i class="icon iconfont">&#xe629;</i></a></li>
+        <li><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.youzewang.com/jianli&title=Baron简历"> <i class="icon iconfont">&#xe616;</i></a></li>
+
+        <li><a href="http://share.renren.com/share/buttonshare.do?link=http://blog.youzewang.com/jianli&title=Baron简历"><i class="icon iconfont">&#xe66b;</i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script type="text/javascript" src="../js/jquery.1.11.1.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/SmoothScroll.js"></script>
+<script type="text/javascript" src="../js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../js/jquery.counterup.js"></script>
+<script type="text/javascript" src="../js/waypoints.js"></script>
+<script type="text/javascript" src="../js/jqBootstrapValidation.js"></script>
+<script type="text/javascript" src="../js/contact_me.js"></script>
+<script src="../js/owl.carousel.js"></script>
+
+<!-- Javascripts
+    ================================================== --> 
+<script type="text/javascript" src="../js/main.js"></script>
+
+<script>
+ $(function()
+ {
+ var u = navigator.userAgent;
+if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1||u.indexOf('iPhone') > -1||u.indexOf('Windows Phone') > -1||navigator.userAgent.indexOf("iPad")>-1) {
+   $(".hover-bg .hover-text").css({'opacity':'1'});
+   
+   $(".hover-bg .hover-text>h4").css({'opacity':'1','-webkit-transform':'translateY(0)','transform':'translateY(0)'});
+   
+   $(".hover-bg .hover-text>i").css({'opacity':'1'});
+} 
+    
+ });
+  
+</script>
+</body>
+</html>

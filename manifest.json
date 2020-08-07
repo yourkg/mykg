@@ -2,7 +2,7 @@
     "short_name": "yourkg",
     "name": "test_about_TWA",
     "icons": [{
-        "src": "app.png",
+        "src": "icon/icon-144x144.png",
         "type": "image/png",
         "sizes": "144x144"
     }],
